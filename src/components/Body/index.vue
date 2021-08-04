@@ -12,6 +12,8 @@ export default {
 
 <style>
   .bodyContent{
-    width: 600px;
+    width: 50rem;
+    height: 100%;
+    border-radius: 0 3rem 3rem 0;
   }
 </style>

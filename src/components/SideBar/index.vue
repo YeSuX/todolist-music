@@ -26,18 +26,22 @@ export default {
 
 <style lang="scss" scoped>
 .sidebar {
-  width: 280px;
-  background-color: cadetblue;
-  border-radius: 10px 0px 0px 10px;
+  width: 25rem;
+  height: 100%;
+  position: relative;
+  // background-color: var(--greyLight-2);
+  border-radius: 3rem 0 0 3rem;
   .sidebar-top {
-    margin-top: 54px;
-    margin-bottom: 20px;
+    padding-top: 2rem;
+    max-height: 20rem;
   }
   .sidebar-bottom {
-    background-color: white;
-    opacity: 0.5;
-    height: 336px;
-    border-radius: 0 0 0 10px;
+    max-height: 18rem;
+    overflow: auto;
+    margin-top: 2rem;
+    &::-webkit-scrollbar {
+      display: none; /* Chrome Safari */
+    }
   }
 }
 </style>

@@ -20,11 +20,11 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  width: 880px;
-  height: 610px;
-  border-radius: 10px;
-  background-color: beige;
-  margin: 0 auto;
+  width: 75rem;
+  height: 40rem;
+  border-radius: 3rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2),
+    -0.2rem -0.2rem 1.8rem var(--white);
   display: flex;
 }
 </style>
