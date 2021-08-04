@@ -1,10 +1,34 @@
 <template>
   <div class="container">
     <div class="menu">
-      <div class="btn btn__primary"><p>Button</p></div>
-      <div class="btn btn__secondary"><p>Button</p></div>
-      <div class="btn btn__secondary"><p>Button</p></div>
-      <div class="btn btn__secondary"><p>Button</p></div>
+      <div class="menu-item">
+        <div class="btn btn__primary" @click="$router.push({
+          path:'all',
+          query: {
+            time: new Date(),
+          }})">
+          <i class="fa fa-calendar"></i>
+          <p>全部</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="btn btn__secondary" @click="$router.push('analyse')">
+          <i class="fa fa-bar-chart"></i>
+          <p>分析</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="btn btn__secondary" @click="$router.push('music')">
+          <i class="fa fa-music"></i>
+          <p>叮~</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="btn btn__secondary" href="https://github.com/YeSuX/todolist-music">
+          <i class="fa fa-github"></i>
+          <p>Github</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -26,6 +50,9 @@ $inner-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2),
   align-items: center;
 }
 .menu {
+  .menu-item {
+    display: inline-block;
+  }
   .btn {
     width: 10rem;
     height: 5rem;
@@ -37,8 +64,8 @@ $inner-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2),
     justify-content: center;
     cursor: pointer;
     transition: 0.3s ease;
-    display: inline-block;
     margin: 1rem;
+    font-size: 1.6rem;
     &__primary {
       background: var(--primary);
       box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-light),
@@ -63,12 +90,9 @@ $inner-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2),
         box-shadow: $inner-shadow;
       }
     }
-
-    p {
-      font-size: 1.6rem;
-      line-height: 5rem;
-      text-align: center;
-    }
+  }
+  .fa {
+    margin-right: 1rem;
   }
 }
 </style>

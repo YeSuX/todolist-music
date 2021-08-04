@@ -1,18 +1,16 @@
 <template>
   <div class="wrapper">
     <sidebar></sidebar>
-    <bodyContent></bodyContent>
+    <router-view class="contain" />
   </div>
 </template>
 
 <script>
-import bodyContent from "@/components/Body";
 import sidebar from "@/components/SideBar";
 
 export default {
   name: "Home",
   components: {
-    bodyContent,
     sidebar,
   },
 };
@@ -26,5 +24,10 @@ export default {
   box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2),
     -0.2rem -0.2rem 1.8rem var(--white);
   display: flex;
+  .container {
+    width: 50rem;
+    height: 100%;
+    border-radius: 0 3rem 3rem 0;
+  }
 }
 </style>
