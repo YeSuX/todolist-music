@@ -59,7 +59,7 @@ export default {};
     display: flex;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 85%;
     background-color: var(--greyLight-1);
     padding-top: 0.5rem;
     padding-bottom: 1rem;

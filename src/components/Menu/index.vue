@@ -2,11 +2,7 @@
   <div class="container">
     <div class="menu">
       <div class="menu-item">
-        <div class="btn btn__primary" @click="$router.push({
-          path:'all',
-          query: {
-            time: new Date(),
-          }})">
+        <div class="btn btn__primary" @click="$router.push('all')">
           <i class="fa fa-calendar"></i>
           <p>全部</p>
         </div>
@@ -24,7 +20,7 @@
         </div>
       </div>
       <div class="menu-item">
-        <div class="btn btn__secondary" href="https://github.com/YeSuX/todolist-music">
+        <div class="btn btn__secondary" @click="goGithub">
           <i class="fa fa-github"></i>
           <p>Github</p>
         </div>
@@ -36,6 +32,11 @@
 <script>
 export default {
   name: "menuBox",
+  methods:{
+    goGithub(){
+      location.href='https://github.com/YeSuX/todolist-music'
+    }
+  }
 };
 </script>
 
